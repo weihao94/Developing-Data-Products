@@ -1,0 +1,41 @@
+Optimal Car Selection
+========================================================
+author: Wei Hao Khoong
+date: 1/6/18
+autosize: true
+
+Introduction
+========================================================
+
+This presentation is part of the Course Project for the Developing Data Products course hosted on Coursera.
+
+- The app developed for the first part of the assignment is avalilable at: https://khoongweihao.shinyapps.io/Optimal_car_selection/
+- The source code for the ui.R and server.R files are available on the GitHub repository: https://github.com/weihao94/Developing-Data-Products
+
+How to find the Optimal car
+========================================================
+
+This app allows you to choose a car for your daily commute, using the mtcars dataset from R.
+
+Firstly, you need to input the distance of your trip and the price of gasoline in the region you reside in. These information will then be used to calculate the Gasoline Expenditure for each car in the dataset. Following which, you can enter the maximum amount of money you want to spend on gasoline, and the table will show only the cars with miles per gallon (mpg) that can go below this value.
+
+Lastly, you can select some caractheristcs of the cars that you want: Cylinders, Displacement, Horse Power and Transmission.
+
+The Dataset
+========================================================
+
+The data used in the app comes from the Motor Trend Car Road Tests (mtcars) dataset.
+
+```{r}
+library(car)
+head(mtcars)
+```
+
+The Plot
+========================================================
+
+We now observe the relationship between three variables: miles per gallon (mpg), displacement (disp) and weight (wt):
+
+```{r, echo=FALSE}
+plot(~mpg+disp+wt, data=mtcars, cex.axis=1.5)
+```
